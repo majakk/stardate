@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center" 
+    android:background="@drawable/startrek_bg">
+    <TextView 
+	android:text="StarDate" 
+	android:layout_height="wrap_content" 
+	android:id="@+id/textViewMain" 
+	android:layout_width="wrap_content"
+	android:layout_gravity="center" 
+	android:layout_centerHorizontal="true" 
+	android:textSize="32dp" 
+	android:textColor="#FFFFFF" 
+	android:layout_margin="10dp">
+	</TextView>
+    <TableRow 
+    android:id="@+id/tableRow1" 
+    android:layout_height="wrap_content" 
+    android:layout_below="@+id/textViewMain" 
+    android:layout_width="wrap_content" 
+    android:layout_gravity="center"
+    android:layout_centerHorizontal="true"
+    >
+    	<TextView 
+		android:text="[-12] " 
+		android:layout_height="wrap_content" 
+		android:id="@+id/textView1" 
+		android:layout_width="wrap_content"
+		android:layout_gravity="center"
+		android:layout_below="@+id/textViewMain" android:textSize="30dp" android:textColor="#6666AA">
+		</TextView>
+		<TextView 
+		android:text="12345.6" 
+		android:layout_height="wrap_content" 
+		android:id="@+id/textView2" 
+		android:layout_width="wrap_content"
+		android:layout_gravity="center"
+		android:layout_below="@+id/textViewMain" android:textSize="30dp" android:textColor="#9999EE"
+		android:layout_toRightOf="@+id/textView1">
+		</TextView>
+		<TextView 
+		android:text="99" 
+		android:layout_height="wrap_content" 
+		android:id="@+id/textView3" 
+		android:layout_width="wrap_content"	
+		android:layout_gravity="center"
+		android:layout_below="@+id/textViewMain" android:textSize="30dp" android:textColor="#6666AA"
+		android:layout_toRightOf="@+id/textView2">
+		</TextView>
+    </TableRow>
+	
+	<ImageButton 
+	android:id="@+id/imageView2" 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content" 
+	android:layout_alignParentBottom="true"
+	android:layout_alignParentRight="true" 
+	android:src="@drawable/info"
+	android:padding="6dp" android:background="#00000000">
+	</ImageButton>
+</RelativeLayout>
