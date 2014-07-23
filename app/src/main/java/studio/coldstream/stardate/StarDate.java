@@ -151,7 +151,7 @@ public class StarDate {
         	stardate[2] = "--";        	 
         }
         
-        Log.v(TAG, "Stardate: " + stardate[0] + stardate[1] + stardate[2]);
+        //Log.v(TAG, "Stardate: " + stardate[0] + stardate[1] + stardate[2]);
         return stardate;
 		
 	}

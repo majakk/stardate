@@ -1,5 +1,18 @@
 package studio.coldstream.stardate;
 
+/*
+* ToDo:
+* When screen pressed in about activity - go back - check!
+* Copy to clipboard - check!
+* Share to whoever using whatever - check!
+* Fix the widget since its not working anymore! - check!
+*
+* */
+
+
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Typeface;
@@ -13,6 +26,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -36,7 +50,6 @@ public class MainActivity extends ActionBarActivity {
     boolean main_flag = false;
 
     String[] stardate = new String[3];
-
 
 
     @Override
@@ -68,9 +81,38 @@ public class MainActivity extends ActionBarActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_copy) {
+            //Log.d(TAG,"Copy");
+
+            // Gets a handle to the clipboard service.
+            ClipboardManager clipboard = (ClipboardManager)
+                    getSystemService(Context.CLIPBOARD_SERVICE);
+
+            // Creates a new text clip to put on the clipboard
+            ClipData clip = ClipData.newPlainText("Stardate",stardate[0]+stardate[1]+stardate[2]);
+
+            clipboard.setPrimaryClip(clip);
+
+            Toast.makeText(getApplicationContext(), "Copied to Clipboard",
+                    Toast.LENGTH_LONG).show();
+
             return true;
         }
+        if (id == R.id.action_share) {
+            //Log.d(TAG,"Share");
+
+            Intent i = new Intent(Intent.ACTION_SEND);
+            String msg ="Captain's Log";
+
+            i.setType("text/plain");
+            i.putExtra(Intent.EXTRA_SUBJECT, msg);
+            i.putExtra(Intent.EXTRA_TEXT, stardate[0]+stardate[1]+stardate[2]);
+
+            startActivity(Intent.createChooser(i, "Select"));
+
+            return true;
+        }
+
         return super.onOptionsItemSelected(item);
     }
 

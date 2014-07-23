@@ -2,29 +2,19 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:id="@+id/layout" 
 	android:layout_width="fill_parent" android:layout_height="fill_parent"
-	android:background="@drawable/myshape" android:layout_margin="6dip"
+	android:background="#66000022" android:layout_margin="2dp"
 	>
-	<TextView 
-	android:text="" 
-	android:layout_height="wrap_content" 
-	android:id="@+id/textViewMain2" 
-	android:layout_width="wrap_content"
-	android:layout_gravity="center" 
-	android:layout_centerHorizontal="true" 
-	android:textSize="32dp" 
-	android:textColor="#FFFFFF" 
-	android:layout_margin="20dp">
-	</TextView>	
-       
+
 	<TextView 
 	android:text="12345.6" 
 	android:layout_height="wrap_content" 
 	android:id="@+id/textView02" 
 	android:layout_width="wrap_content"
-	android:layout_centerInParent="true"
+	android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
 	android:textStyle="bold"
-	android:layout_below="@+id/textViewMain2" android:textSize="32dp" android:textColor="#9999EE"
-	>
+    android:textSize="32dp" android:textColor="#9999EE"	>
+
 	</TextView>
 	<TextView 
 	android:text="[-12] " 
@@ -32,7 +22,8 @@
 	android:id="@+id/textView01" 
 	android:layout_width="wrap_content"
 	android:textStyle="bold"
-	android:layout_below="@+id/textViewMain2" android:textSize="32dp" android:textColor="#6666AA"
+    android:layout_centerVertical="true"
+	android:textSize="32dp" android:textColor="#6666AA"
 	android:layout_toLeftOf="@+id/textView02">
 	</TextView>
 	<TextView 
@@ -41,9 +32,10 @@
 	android:id="@+id/textView03" 
 	android:layout_width="wrap_content"	
 	android:textStyle="bold"
-	android:layout_below="@+id/textViewMain2" android:textSize="32dp" android:textColor="#6666AA"
+    android:layout_centerVertical="true"
+	android:textSize="32dp" android:textColor="#6666AA"
 	android:layout_toRightOf="@+id/textView02">
-	</TextView>
+   	</TextView>
     
 </RelativeLayout>
 

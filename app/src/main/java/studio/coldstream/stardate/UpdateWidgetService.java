@@ -21,11 +21,13 @@ public class UpdateWidgetService extends Service {
     }  
   
     @Override  
-    public void onStart(Intent intent, int startId)  
+    public int onStartCommand(Intent intent, int flags,int startId)
     {  
         buildUpdate();  
   
-        super.onStart(intent, startId);
+        super.onStartCommand(intent, flags, startId);
+
+        return START_STICKY;
     }  
   
     private void buildUpdate()  
@@ -39,8 +41,7 @@ public class UpdateWidgetService extends Service {
 		AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(this
 				.getApplicationContext());
 		
-        RemoteViews remoteViews = new RemoteViews(getPackageName(),
-				R.layout.widget_layout);
+        RemoteViews remoteViews = new RemoteViews(getPackageName(), R.layout.widget_layout);
 	    stardate = myStarDate.getStarDate2();
        
         remoteViews.setTextViewText(R.id.textView01,"" + stardate[0]);

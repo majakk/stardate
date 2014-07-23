@@ -7,12 +7,15 @@
     <string name="about">\n
     This mobile application provides an accurate stardate according to STArchive (and Google Calendar).
     By this widely accepted theory stardates actually begin on 2162-01-04 ([0]0000.0) and advances at a rate of 5 units per day.
-    \n
-    Stardates are universal in the sense that they can be correlated to GMT. At the same time they are subject to general relativity theory.
+    \n\n
+    Stardates are universal in the sense that they through careful calculations can be correlated to many interstellar timezones including GMT. However, note that they are subject to general relativity theory.
     The number in square brackets (e.g. [-27]) is the issue number. The negative sign indicate that we are 27 issues before Stardate zero
-    which according to STArchive might be related to the incorporation of the Federation and discovery of the warp drive. The middle section of the number
-    commonly written as e.g. SD 00712.8 is the most common way to annotate Stardates. The last two digits are for precision and the last digit updates
+    which according to STArchive might be related to the incorporation of the Federation and discovery of the warp drive.
+    \n\n
+    The middle section of the number
+    commonly written as e.g. SD 00712.8 is widely used to annotate Stardates for logging purposes. The last two digits adds precision when needed and updates
     at a rate of about once every twenty second.
     </string>
+    <string name="logotext">studio coldstream</string>
 
 </resources>
