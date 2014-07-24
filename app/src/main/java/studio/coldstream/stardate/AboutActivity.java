@@ -16,14 +16,16 @@ public class AboutActivity extends Activity{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.about);
-        ScrollView sv = (ScrollView)findViewById(R.id.scrollView);
+
+        //Tap view to go back. Did not work since it conflicts with scrolling
+        /*ScrollView sv = (ScrollView)findViewById(R.id.scrollView);
         sv.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 onBackPressed();
                 return false;
             }
-        });
+        });*/
     }
 	
 	public void onConfigurationChanged(Configuration newConfig) {
